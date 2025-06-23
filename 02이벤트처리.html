@@ -50,6 +50,8 @@
      <button id="daumBtn">http://www.daum.net</button>
      <script>
         const greet = document.getElementById('greet') //3. 인사하기 버튼 가져오기
+        //id=greet 요소에 '클릭'이벤트가 발생할 때 처리할 함수 등록
+        
         greet.addEventListener('click',function(){
                                 // 함수(메소드) 안의 함수 => 콜백함수. 이름 없이 사용
             const name = document.getElementById('client').value
@@ -71,6 +73,8 @@
         naverBtn.addEventListener('click',function(){
             
             window.open(naverBtn.textContent)
+            // textContent 속성 : 시작태그와 종료 태그 사이의 텍스트
+            // innerHTML 속성:                              요소(태그가 포함)
 
             }
         )

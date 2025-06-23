@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <img id="bulb" src="./images/pic_bulboff.gif" alt="OFF" width="70px" style="cursor: pointer;">
+    <button id="btn">OFF</button>
+    <!-- 버튼 클릭할 때마다 'ON', 'OFF' 토글(toggle) -->
+    <script>
+        const btn = document.getElementById('btn')
+        // 토글 기능을 변수를 이용해서 제어
+        let isOn = false // true('ON'),false('OFF')
+        let btnText
+        const bulbOFF = "./images/pic_bulboff.gif"
+        const bulbON = "./images/pic_bulbon.gif"
+        let bulbImg = bulbOFF
+        const img = document.querySelector('img')
+        //자주 사용하는 함수를 변수에 저장
+        //const onoff = ()=>{
+        const onoff = function(){ //함수에 대한 변수 선언은 사용하는 코드보다 앞에
+            if(isOn){
+                btnText='OFF'
+                bulbImg = bulbOFF
+            }else{
+                btnText='ON'
+                bulbImg = bulbON
+            }
+            btn.textContent=btnText
+            img.src = bulbImg
+            isOn = !isOn
+        }
+
+        btn.addEventListener('click',onoff)
+        img.addEventListener('click',onoff)
+      
+    </script>
+</body>
+</html>
