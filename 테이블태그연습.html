@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배열과 반복문</title>
+</head>
+<style>
+    table{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    th{
+        width: 100px;
+        background-color: red;
+        color: white;
+    }
+    td{
+        width: 80px;
+        border: 1px solid red;
+    }
+    
+</style>
+<body>
+    <table>
+        <tr id="time">
+            <th>TIME</th>
+
+        </tr>
+        <tr id="todo">
+            <th>TODO</th>
+        </tr>
+    </table>
+    <script>
+        
+        const time = ['09:00', '11:00', '12:30', '14:00', '16:45']
+        const todo = ['수업','과제','점심식사','주간회의','자료조사']
+        const timet = document.getElementById('time')
+        const todot = document.getElementById('todo')
+        for(let i=0; i<time.length ; i++){
+            const td1 = document.createElement('td')
+            const td2 = document.createElement('td')
+            td1.textContent=time[i]
+            td2.textContent=todo[i]
+            timet.appendChild(td1)
+            todot.appendChild(td2)
+        }
+
+       
+    </script>
+</body>
+</html>

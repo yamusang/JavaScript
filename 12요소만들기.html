@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .blue{
+            color:blue;
+        }
+
+        .w500{
+            font-weight: 500;
+        }
+
+/* ::before, ::after 가상요소 */
+        ul#twice2>li::before,ul#twice2>li::after{
+            content: '😊';
+            font-size: 0.8rem;
+            vertical-align: middle;
+        }
+    </style>
+    <!-- defer 속성 : head 안의 script는 body안의 태그 요소를 
+        모두 생성한 후에 실행됩니다. 
+    -->
+    <script src="./js/12ex.js" defer>
+        
+    </script>
+    <script>
+        const test = document.getElementById('twice2') // 오류
+        console.log(test.innerHTML) // body의 내용이 없는 상태이다.
+
+    </script>
+</head>
+<body>
+    <ul id="twice2">
+        <!-- li 요소를 명령어로 만들거에요. -->
+    </ul>
+</body>
+</html>
