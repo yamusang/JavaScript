@@ -41,7 +41,7 @@ function printImage(docs,count){ // 임의로 정한 변수(인자)
     for(let i = 0; i < count; i ++){
         console.log(docs[i].url)
         const li = document.createElement('li')
-        li.innerHTML=`<video src="${docs[i].url}" width="400px" height="400px" autoplay>`
+        li.innerHTML=`<video src="${docs[i].url}" width="400px" height="400px" preload controls>`
         ul.appendChild(li)
     }
 

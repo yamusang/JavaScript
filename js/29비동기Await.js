@@ -9,6 +9,8 @@ const headers = {
 const query = '트와이스'
 const url = `https://dapi.kakao.com/v2/search/image?query=${query}&sort=recency`
 
+// 🔥비동기 함수의 처리를 기다려야 하는 경우를 테스트
+// result, result2 변수가 fetch 실행 결과를 받기 위한 예시
 let result
 
 async function loadData() //Promise() 기반 await 포함한 경우 async 키워드 표시
