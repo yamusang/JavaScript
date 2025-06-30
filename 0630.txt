@@ -1,0 +1,17 @@
+네트워크를 통한 데이터 전송
+
+파일형식 : csv(Comma Separated Values)
+	데이터를, (콤마)로 나열.
+
+데이터 형식 :
+1) XML : (Extensible Markup Language). 데이터를 표현/ 저장/전송하는 형식
+	HTML의 정해진 태그처럼 데이터 저장을 위해서 다양한 태그를 정의
+	하는 것이 가능
+2) JSON :(JavaScript Object Notation) 자바스크립트 객체를 문자열 형태로 표현하여 전송.
+	지금은 대체로 JSON 사용합니다.
+
+	<데이터 발신(BE or FE)>	                --------->		<데이터 수신(FE or BE)>
+	객체를 문자열(JSON)	JSON 전송		JSON문자열 객체로 변환
+	why? 프로그램에서는 객체 형식이어야 객체.속성으로 데이터 사용 가능
+		인터넷에서는 문자열 형태로 보내야 전송이 가능.
+		response.json() 은 응답의 본문(데이터)을 JS 객체로 변환
