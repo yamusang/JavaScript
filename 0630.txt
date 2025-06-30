@@ -1,4 +1,4 @@
-네트워크를 통한 데이터 전송
+1. 네트워크를 통한 데이터 전송(Open API)
 
 파일형식 : csv(Comma Separated Values)
 	데이터를, (콤마)로 나열.
@@ -15,3 +15,12 @@
 	why? 프로그램에서는 객체 형식이어야 객체.속성으로 데이터 사용 가능
 		인터넷에서는 문자열 형태로 보내야 전송이 가능.
 		response.json() 은 응답의 본문(데이터)을 JS 객체로 변환
+
+2. Open API 데이터 요청
+
+ 테스트 명령어 : curl
+ 개발 코드를 만들기 전에 url, 인증,, 쿼리데이터 잘 동작하는지 확인하는 목적.
+
+curl -v -G GET "https://dapi.kakao.com/v2/search/vclip" ^
+--data-urlencode "query=AOA" ^
+-H "Authorization: KakaoAK 1d62c9cf1a2869895c4e52f2998100a2"
